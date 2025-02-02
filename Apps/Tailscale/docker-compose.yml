@@ -18,7 +18,7 @@ services:
       resources:
         limits:
           memory: 7937M
-    hostname: casaos-tailscale
+    hostname: tailscale
     image: tailscale/tailscale:v1.78.3
     labels:
       icon: https://play-lh.googleusercontent.com/wczDL05-AOb39FcL58L32h6j_TrzzGTXDLlOrOmJ-aNsnoGsT1Gkk2vU4qyTb7tGxRw
@@ -37,8 +37,11 @@ services:
     network_mode: host
     privileged: false
 x-casaos:
-  author: self
-  category: self
+  author: Ronnie
+  category: VPN
+  architectures:
+  - amd64
+  - arm64
   hostname: 
   icon: https://play-lh.googleusercontent.com/wczDL05-AOb39FcL58L32h6j_TrzzGTXDLlOrOmJ-aNsnoGsT1Gkk2vU4qyTb7tGxRw
   index: /
